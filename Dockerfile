@@ -34,8 +34,8 @@ ENV DOCKER_HOST unix:///tmp/docker.sock
 
 VOLUME ["/etc/nginx/certs", "/etc/nginx/dhparam"]
 
-RUN { \\
-      echo 'client_max_body_size 1024m;'; \\
+RUN { \
+      echo 'client_max_body_size 1024m;'; \
     } > /etc/nginx/conf.d/proxy.conf
 
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
